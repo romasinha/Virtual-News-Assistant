@@ -4,13 +4,48 @@
 
 body{
     margin: 0;
-    background-color: whitesmoke;
+    background-color: #3ac7ff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%2337b6ee' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%2334a5dd' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%233294cc' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%232f83bb' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%232c72aa' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 *{
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 html{
     scroll-behavior: smooth;
+}
+
+.logo{
+    height: 320px;
+    padding-left: 10px;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    z-index: 1;
+
+}
+
+.title{
+font-size: 50px;
+padding-top: 40px;
+padding-left: 0px;
+padding-bottom: 0px;
+}
+
+.para{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+p{
+    font-size: 20px;
 }
