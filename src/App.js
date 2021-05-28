@@ -8,13 +8,21 @@ const alanKey = '1a6cbc6f03f876ce047818290c32080c2e956eca572e1d8b807a3e2338fdd0d
 const App=()=> { 
 
     const [newsArticles, setNewsArticles] =useState([]);
+    const [activeArticle, setActiveArticle] = useState(-1);
 
     useEffect(()=>{
         alanBtn({
             key: alanKey,
             onCommand: ({command, articles})=>{
                 if(command==='newHeadlines'){
-                    setNewsArticles(articles);}
+                    setNewsArticles(articles);
+                    setActiveArticle(-1);
+                }
+                else if(command==='highlight'){
+                    setActiveArticle((prevActiveArticle)=>
+                        prevActiveArticle+1
+                    );
+                }
             }
         })
     }, [])
@@ -29,7 +37,7 @@ const App=()=> {
             </div>
             
             </div>
-            <NewsCards articles={newsArticles}/>
+            <NewsCards articles={newsArticles} activeArticle={activeArticle}/>
         </div>
     )
 }
